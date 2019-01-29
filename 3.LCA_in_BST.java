@@ -4,9 +4,9 @@ class Solution {
             return null;
         }
         if( p.val < root.val && q.val < root.val){
-            lowestCommonAncestor(root.left, p, q);
+            return lowestCommonAncestor(root.left, p, q);
         } else  if( p.val > root.val && q.val > root.val){
-            lowestCommonAncestor(root.right, p, q);
+            return lowestCommonAncestor(root.right, p, q);
         } else {
             return root;
         }
