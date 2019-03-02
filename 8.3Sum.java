@@ -2,6 +2,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * POINTS : 
+ * sort the array 
+ * Loop once, skip duplicates, 
+ *      two sum - use BINARY SEARCH( two pointers, i=0 j=length ), skip duplicates
+ */
+
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
 
@@ -17,7 +24,7 @@ class Solution {
 
             int sum = -nums[i];
 
-            //two sum problem now - binary search 
+            //two sum problem now - binary search(2 pointers)
             int a=i+1, b=nums.length-1;
             while( a < b ){
                 if( nums[a]+ nums[b] == sum ){
