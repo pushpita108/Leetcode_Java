@@ -23,4 +23,19 @@ class Solution {
         return prev; // TA-DA 
         
     }
+
+    ListNode head;
+    public ListNode reverseRecursive(ListNode curr, ListNode prev){
+
+        if( cuur.next == null ) { //reached last 
+            head = curr; // set the head to last element now 
+            curr.next = prev; // make the last link and return 
+            return head;
+        }
+        ListNode next = curr.next;
+        curr.next = prev;
+
+        reverseRecursive( next, curr );
+        return head;
+    }
 }

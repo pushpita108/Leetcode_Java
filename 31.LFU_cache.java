@@ -18,14 +18,18 @@ class LFUCache {
     public int get(int key) {
         if(!vals.containsKey(key))
             return -1;
+
         int count = counts.get(key);
         counts.put(key, count + 1);
+
         lists.get(count).remove(key);
         if(count == min && lists.get(count).size() == 0)
             min++;
+
         if(!lists.containsKey(count + 1))
             lists.put(count+1, new LinkedHashSet<>());
         lists.get(count+1).add(key);
+        
         return vals.get(key);
     }
     

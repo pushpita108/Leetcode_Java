@@ -12,7 +12,7 @@ class Solution {
         if( count == k ){
             curr = reverseKGroup( curr, k ); // recurse 
 
-            // reverse the k-group now
+            // reverse the k-group now // curr -> head -> temp
             while( count != 0){
                 //normal reverse 
                 ListNode temp = head.next;
